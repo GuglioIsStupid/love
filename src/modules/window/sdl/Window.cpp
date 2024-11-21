@@ -806,6 +806,12 @@ void Window::getWindow(int &width, int &height, WindowSettings &newsettings)
 	newsettings = settings;
 }
 
+void Window::setOpacity(float opacity)
+{
+	if (window)
+		SDL_SetWindowOpacity(window, opacity);
+}
+
 void Window::close()
 {
 	close(true);

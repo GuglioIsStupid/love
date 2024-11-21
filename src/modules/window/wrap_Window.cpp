@@ -243,6 +243,12 @@ int w_getMode(lua_State *L)
 	return 3;
 }
 
+int w_setOpacity(lua_State *L)
+{
+	luax_catchexcept(L, [&]() { instance()->setOpacity((float) luaL_checknumber(L, 1)); });
+	return 0;
+}
+
 int w_isHighDPIAllowed(lua_State *L)
 {
 	luax_pushboolean(L, isHighDPIAllowed());
@@ -703,6 +709,7 @@ static const luaL_Reg functions[] =
 	{ "showMessageBox", w_showMessageBox },
 	{ "requestAttention", w_requestAttention },
 	{ "getPointer", w_getPointer },
+	{ "setOpacity", w_setOpacity },
 	{ 0, 0 }
 };
 

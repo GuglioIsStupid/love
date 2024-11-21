@@ -136,6 +136,8 @@ public:
 	virtual bool setWindow(int width = 800, int height = 600, WindowSettings *settings = nullptr) = 0;
 	virtual void getWindow(int &width, int &height, WindowSettings &settings) = 0;
 
+	virtual void setOpacity(float opacity) = 0;
+
 	virtual void close() = 0;
 
 	virtual bool setFullscreen(bool fullscreen, FullscreenType fstype) = 0;

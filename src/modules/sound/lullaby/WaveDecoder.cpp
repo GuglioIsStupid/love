@@ -69,8 +69,8 @@ WaveDecoder::WaveDecoder(Stream *stream, int bufferSize)
 		if (wuff_status < 0)
 			throw love::Exception("Could not retrieve WAVE stream info");
 
-		if (info.channels > 2)
-			throw love::Exception("WAVE Multichannel audio not supported");
+		/* if (info.channels > 2)
+			throw love::Exception("WAVE Multichannel audio not supported"); */
 
 		if (info.format != WUFF_FORMAT_PCM_U8 && info.format != WUFF_FORMAT_PCM_S16)
 		{

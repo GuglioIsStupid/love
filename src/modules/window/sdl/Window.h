@@ -48,6 +48,8 @@ public:
 	bool setWindow(int width = 800, int height = 600, WindowSettings *settings = nullptr) override;
 	void getWindow(int &width, int &height, WindowSettings &settings) override;
 
+	void setOpacity(float opacity) override;
+
 	void close() override;
 
 	bool setFullscreen(bool fullscreen, FullscreenType fstype) override;
