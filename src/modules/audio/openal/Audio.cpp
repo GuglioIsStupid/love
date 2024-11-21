@@ -81,6 +81,8 @@ ALenum Audio::getFormat(int bitDepth, int channels)
 		return bitDepth == 8 ? AL_FORMAT_MONO8 : AL_FORMAT_MONO16;
 	else if (channels == 2)
 		return bitDepth == 8 ? AL_FORMAT_STEREO8 : AL_FORMAT_STEREO16;
+	else if (channels == 4)
+		return bitDepth == 8 ? AL_FORMAT_QUAD8 : AL_FORMAT_QUAD16;
 #ifdef AL_EXT_MCFORMATS
 	else if (alIsExtensionPresent("AL_EXT_MCFORMATS"))
 	{
